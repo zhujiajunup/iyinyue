@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block  section %}
+    <body class="bg-info dker">
+    <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
+    <div class="container aside-xl">
+      <a class="navbar-brand block" href="{% static '' %}../../../templates/index.html">
+          <span class="h1 font-bold">iyinyue</span>
+      </a>
+      <section class="m-b-lg">
+        <header class="wrapper text-center">
+          <strong>注册</strong>
+        </header>
+        <div>
+            {% csrf_token %}
+          <div class="form-group">
+            <input placeholder="给自己起个昵称吧！" class="form-control rounded input-lg text-center no-border"name="user_name" id="user_name">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="输入你的电子邮箱吧！" class="form-control rounded input-lg text-center no-border"
+                    id="user_email">
+          </div>
+          <div class="form-group">
+             <input type="password" placeholder="输入你账号的密码！" class="form-control rounded input-lg text-center no-border"
+                     id="user_password">
+          </div>
+            <div class="form-group">
+                <button data-toggle="dropdown" class="form-control rounded input-lg text-center no-border btn btn-sm btn-default dropdown-toggle">
+                    <span class="dropdown-label">你是帅哥还是美眉啊？</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="form-control rounded input-lg text-center no-border dropdown-menu dropdown-select">
+                    <li class="form-control rounded input-lg text-center no-border active"><input type="radio" name="d-s-r" checked=""><a href="#">帅哥</a></li>
+                    <li class="form-control rounded input-lg text-center no-border active"><input type="radio" name="d-s-r"><a href="#">美眉</a></li>
+                    <li class="disabled"><input type="radio" name="d-s-r" disabled=""><a href="#">I'm disabled</a></li>
+                </ul>
+            </div>
+            <!--
+          <div class="checkbox i-checks m-b">
+            <label class="m-l">
+              <input type="checkbox" checked=""><i></i> Agree the <a href="#">terms and policy</a>
+            </label>
+          </div>
+          -->
+          <button type="submit" class="btn btn-lg btn-warning lt b-white b-2x btn-block btn-rounded" id="register">
+              <i class="icon-arrow-right pull-right"></i>
+              <span class="m-r-n-lg">完成注册</span>
+          </button>
+          <div class="line line-dashed"></div>
+          <p class="text-muted text-center"><small>已经注册了?</small></p>
+          <a href="http://127.0.0.1:8000/user/login/" class="btn btn-lg btn-info btn-block btn-rounded">点我登录吧！</a>
+        </div>
+      </section>
+    </div>
+  </section>
+     <!-- footer -->
+    <footer id="footer">
+    <div class="text-center padder">
+      <p>
+        <small>iyinyue<br>&copy; 2015</small>
+      </p>
+    </div>
+  </footer>
+    </body>
+{% endblock %}
+{% block script%}
+     <script type="text/javascript" src="{% static 'user/js/register.js' %}"></script>
+{% endblock %}

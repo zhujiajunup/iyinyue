@@ -1,0 +1,16 @@
+{% extends 'admin/jquery.html' %}
+{% block title %}
+hello, djquery!
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+<div><input type="button" id="myField" value="Click me!"/></div>
+{% endblock %}
+
+{% block scripts %}
+    {% load staticfiles  %}
+    <script language="JavaScript" type="text/javascript" src="{% static 'js/simples/hello.js' %}"></script>
+{% endblock %}
