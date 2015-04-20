@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %} 标题 {% endblock %}</title>
+<!--
+    <link href="css/djquery.css" rel="stylesheet">
+    -->
+
+{% block styles %}<!--custom styles-->{% endblock %}
+  </head>
+  <body>
+    <div id="container">
+{% block content %}内容{% endblock %}
+    </div>
+</body>
+  {% load staticfiles %}
+  <script language="JavaScript" type="text/javascript" src={% static 'polls/js/jquery-2.1.3.min.js' %}></script>
+{% block scripts %}
+<!--custom scripts-->
+{% endblock %}
+</html>

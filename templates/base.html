@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>iyinyue</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'iyinyue/js/jPlayer/jplayer.flat.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'iyinyue/css/bootstrap.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'iyinyue/css/animate.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'iyinyue/css/font-awesome.min.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'iyinyue/css/simple-line-icons.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'iyinyue/css/font.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'iyinyue/css/app.css' %}" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+</head>
+ {% block section %}
+ {% endblock %}
+
+   <script src="{% static 'iyinyue/js/jquery.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'iyinyue/js/bootstrap.js' %}"></script>
+    <!-- App -->
+    <script src="{% static 'iyinyue/js/app.js' %}"></script>
+    <script src="{% static 'iyinyue/js/slimscroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'iyinyue/js/app.plugin.js' %}"></script>
+    <script type="text/javascript" src="{% static 'iyinyue/js/jPlayer/jquery.jplayer.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'iyinyue/js/jPlayer/add-on/jplayer.playlist.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'iyinyue/js/jPlayer/demo.js' %}"></script>
+    <script type="text/javascript" src="{% static 'iyinyue/js/jquery.cookie.js' %}"></script>
+ {% block script %}
+ {% endblock %}
+<div style="display:none">
+    {% comment %}<script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>{% endcomment %}
+</div>
+</html>
