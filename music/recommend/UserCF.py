@@ -6,7 +6,6 @@ import operator
 
 # 计算两两用户的相似度
 def user_similarity(train):
-
     item_users = dict()  # 物品与用户的对应表
     for user, items in train.items():  # 遍历所有用户及相关物品
         for item in items.keys():  # 遍历物品
