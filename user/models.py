@@ -64,6 +64,20 @@ class IUser(models.Model):
         return self.user_name
 
 
+# 推荐的项目
+class RecommendItem(models.Model):
+    music = models.ForeignKey(Music)  # 推荐的歌曲
+    recommend_date = models.DateTimeField('recommend_date', default=timezone.now)  # 推荐的时间
+
+
+# 推荐的历史记录表
+class RecommendHistory(models.Model):
+    recommend_user = models.ForeignKey(IUser)  # 推荐的目标用户
+    latest_recommend_time = models.DateTimeField()  # 最新一次推荐时间
+    # 推荐的歌曲列表 many-to-many
+    recommend_items = models.ManyToManyField(RecommendItem, blank=True, null=True, related_name='recommend_item')
+
+
 # 用户为歌曲打标签表
 class MusicTag(models.Model):
     tag_user = models.ForeignKey(IUser)  # 标记用户
