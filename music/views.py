@@ -203,5 +203,14 @@ def init_music(request):
         music.save()
 
 
+# 个性化音乐推荐
+def recommend(request):
+    return None
+
+
+# 根据风格类型来获取音乐列表
+def get_music_by_genre(request):
+    return None
+
 if __name__ == '__main__':
     init_music(request=None)
